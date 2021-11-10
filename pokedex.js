@@ -18,8 +18,11 @@ function PintarPokemons() {
                 let idPoke = pokemon.id
                 let div = document.querySelector("div")
                 let ol = div.querySelector("ol")
+                let div2 = document.createElement("div")
                 let li = document.createElement("li")
                 ol.appendChild(li)
+                ol.appendChild(div2)
+                div2.appendChild(li)
                 let h2 = document.createElement("h2")
                 let p = document.createElement("p")
                 let img = document.createElement("img")
@@ -28,6 +31,10 @@ function PintarPokemons() {
                 li.appendChild(p)
                 li.appendChild(p2)
                 li.appendChild(img)
+                div2.className = "card"
+                img.className = "card-image"
+                h2.className = "card-title"
+                p.className = "card-subtitle"
                 let pintarNombre = document.createTextNode(nombrePoke)
                 let pintarTipo = document.createTextNode(tipoPoke)
                 let pintarId = document.createTextNode(`id: ${idPoke}`)
